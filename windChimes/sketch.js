@@ -17,8 +17,8 @@ function Ball(x, y, r, mass) {
   this.display = function() {
     stroke(0);
     strokeWeight(2);
-    line(this.center.x, this.center.y, this.position.x, this.position.y);
     ellipse(this.position.x, this.position.y, this.r*2, this.r*2);
+    line(this.center.x, this.center.y, this.position.x, this.position.y);
   }
   
   this.applyForce = function(force) {
