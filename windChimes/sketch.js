@@ -34,11 +34,14 @@ function setup() {
   createCanvas(500, 500);
   var position = new p5.Vector(width/2, height/2);
   ball = new Ball(width/2, height/2, 100, 0.0002);
+  
+   wind = new p5.Vector(0, 0);
 }
 
 function touchStarted(){
   console.log("Hello");
   wind = new p5.Vector(0.4, 0.4);
+  
   
   return false;
 }
@@ -50,15 +53,7 @@ function mouseIsPressed(){
 function draw() {
   background(255);
   
-  if (random(1) < .2){
-    wind = new p5.Vector(0.4, 0.4);
-  } else {
-    wind = new p5.Vector(0, 0);
-  }
-  
-  if (mouseIsPressed){
-    wind = new p5.Vector(0.2, 0.2);
-  }
+ 
   
   // Creating the friction force
   var c = 0.05;
