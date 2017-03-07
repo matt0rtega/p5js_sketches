@@ -40,7 +40,8 @@ function setup() {
 
 function touchStarted(){
   console.log("Hello");
-  wind = new p5.Vector(0.4, 0.4);
+  wind = new p5.Vector(mouseX, mouseY);
+  wind.normalize();
   
   
   return false;
