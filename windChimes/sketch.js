@@ -36,6 +36,15 @@ function setup() {
   ball = new Ball(width/2, height/2, 100, 0.0002);
 }
 
+function touchStarted(){
+  console.log("Hello");
+  return false;
+}
+
+function mouseIsPressed(){
+  return false;
+}
+
 function draw() {
   background(255);
   
@@ -52,7 +61,7 @@ function draw() {
   // Creating the friction force
   var c = 0.05;
   var friction = ball.velocity;
-  console.log(friction);
+  //console.log(friction);
   friction.mult(-1);
   friction.normalize();
   friction.mult(c);
