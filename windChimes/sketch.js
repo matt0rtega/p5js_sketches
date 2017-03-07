@@ -46,6 +46,11 @@ function touchStarted(){
   return false;
 }
 
+function touchEnded(){
+  wind = new p5.Vector(0, 0);
+  return false;
+}
+
 function mouseIsPressed(){
   return false;
 }
